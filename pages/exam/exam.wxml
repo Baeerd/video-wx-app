@@ -1,7 +1,7 @@
-<van-cell title="试卷类别1" value="试卷类别选择" is-link class="examList" />
+<custom-select-cell title="考试" sheetTitle="请选择试卷" list="{{ actions }}" bind:selectAction="onSelect"/>
  
 <view class='container'>
-<swiper class='sheet' current='{{id}}'>
+<swiper class='sheet' current='{{id}}' bindchange="swiperChange">
     <swiper-item>
          <view class='naire'>
             <scroll-view scroll-y class="question">

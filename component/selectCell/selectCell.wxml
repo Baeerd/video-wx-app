@@ -1,0 +1,11 @@
+<van-cell title="{{title}}" size="large" value="{{selectName}}" is-link bindtap='showSelectList'/>
+
+<van-action-sheet
+  show="{{ show }}"
+  actions="{{ list }}"
+  description="{{ sheetTitle }}"
+  cancel-text="取消"
+  bind:close="onClose"
+  bind:select="onSelect"
+  bind:cancel="onClose"
+/>

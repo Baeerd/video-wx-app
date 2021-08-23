@@ -6,7 +6,21 @@ Page({
      */
     data: {
         id: 0,
-        answer:[]
+        answer:[],
+        actions: [
+            {
+                id:'1',
+                name: '试卷1',
+            },
+            {
+                id:'2',
+                name: '试卷2',
+            },
+            {
+                id:'3',
+                name: '试卷3'
+            },
+        ]
     },
 
     /**
@@ -14,6 +28,11 @@ Page({
      */
     onLoad: function (options) {
 
+    },
+
+    // 试卷选择事件
+    onSelect(e) {
+        console.log(e.detail.id);
     },
 
     radioChange(e) {
@@ -44,6 +63,7 @@ Page({
     formSubmit() {
         // 校验是否全部选择
         let ansArr = this.data.answer;
+        console.log(ansArr);
         let i = 0;
         let me = this;
         while(i<ansArr.length) {
@@ -75,6 +95,13 @@ Page({
                 console.log(me.data.answer);
                 // 调用接口
             }
+        })
+    },
+
+    // 滑动改变事件
+    swiperChange(current) {
+        this.setData({
+            id: current.detail.current,
         })
     }
       
