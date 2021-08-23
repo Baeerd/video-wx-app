@@ -5,7 +5,8 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        id: 0,
+        answer:[]
     },
 
     /**
@@ -15,52 +16,67 @@ Page({
 
     },
 
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady: function () {
-
+    radioChange(e) {
+        let ansArr = this.data.answer;
+        ansArr[this.data.id] = e.detail.value;
+        this.setData({
+          answer: ansArr,
+        })
+        console.log(this.data.answer);
     },
 
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow: function () {
+    // 下一题
+    nextq(e) {
+        this.setData({
+          id: this.data.id + 1,
+        })
+      },
+       
+      // 上一题
+      lastq (e) {
+          this.setData({
+            id: this.data.id - 1,
+          })
+      },
 
-    },
 
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide: function () {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload: function () {
-
-    },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh: function () {
-
-    },
-
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom: function () {
-
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage: function () {
-
+    // 提交
+    formSubmit() {
+        // 校验是否全部选择
+        let ansArr = this.data.answer;
+        let i = 0;
+        let me = this;
+        while(i<ansArr.length) {
+            if(!ansArr[i]||ansArr[i].length==0) {
+                wx.showModal({
+                    title: '无法提交',
+                    content: '您还有部分题目未完成，请检查后重新提交',
+                    showCancel: false,
+                    confirmColor: '#fcbe39',
+                    confirmText: "好的",
+                    success(res) {
+                    me.setData({
+                        id: i,
+                    })
+                    }
+                })
+                return;
+            }
+            i++;
+        }
+        // 提示交卷
+        wx.showModal({
+            title: '提示',
+            content: '是否确认交卷',
+            showCancel: true,
+            confirmColor: '#fcbe39',
+            confirmText: "交卷",
+            success(res) {
+                console.log(me.data.answer);
+                // 调用接口
+            }
+        })
     }
+      
+   
 })

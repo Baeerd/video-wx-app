@@ -1,3 +1,24 @@
-<!--pages/video/video.wxml-->
-<text>pages/video/video.wxml</text>
-asda
+<view>
+    <video src="" enable-progress-gesture="false" title="视频标题" class="video"></video>
+</view>
+<van-cell title="视频标题" size="large" value="视频类别选择" is-link />
+<scroll-view scroll-y class="videoList">
+    <van-grid column-num="2">
+        <van-grid-item icon="photo-o" text="视频1" />
+        <van-grid-item icon="photo-o" text="视频2" dot />
+        <van-grid-item icon="photo-o" text="视频3" dot />
+        <van-grid-item icon="photo-o" text="视频4" dot />
+        <van-grid-item icon="photo-o" text="视频5" dot />
+        <van-grid-item icon="photo-o" text="视频6" dot />
+        <van-grid-item icon="photo-o" text="视频7" dot />
+        <van-grid-item icon="photo-o" text="视频8" dot />
+        <van-grid-item icon="photo-o" text="视频9" dot />
+        <van-grid-item icon="photo-o" text="视频10" dot />
+        <van-grid-item icon="photo-o" text="视频11" dot />
+        <van-grid-item icon="photo-o" text="视频12" dot />
+        <van-grid-item icon="photo-o" text="视频13" dot />
+        <van-grid-item icon="photo-o" text="视频14" dot />
+        <van-grid-item icon="photo-o" text="视频15" dot />
+        <van-grid-item icon="photo-o" text="视频16" dot />
+    </van-grid>
+</scroll-view>

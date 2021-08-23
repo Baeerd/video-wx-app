@@ -1,1 +1,7 @@
-/* pages/video/video.wxss */
+.video{
+    width: 100%;
+    height: 30vh;
+}
+.videoList{
+    height: 62vh;
+}

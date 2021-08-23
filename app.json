@@ -8,7 +8,7 @@
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#000",
+    "navigationBarBackgroundColor": "#5875D0",
     "navigationBarTitleText": "xxx系统",
     "navigationBarTextStyle":"white"
   },
@@ -17,15 +17,18 @@
       {
         "text":"视频",
         "pagePath":"pages/video/video",
-        "iconPath":""
+        "iconPath":"/assets/icon/video-n.png",
+        "selectedIconPath":"/assets/icon/video-s.png"
       },{
         "text":"考试",
         "pagePath":"pages/exam/exam",
-        "iconPath":""
+        "iconPath":"/assets/icon/exam-n.png",
+        "selectedIconPath":"/assets/icon/exam-s.png"
       },{
         "text":"我的",
         "pagePath":"pages/user/user",
-        "iconPath":""
+        "iconPath":"/assets/icon/user-n.png",
+        "selectedIconPath":"/assets/icon/user-s.png"
       }
     ]
   },
