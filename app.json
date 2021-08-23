@@ -1,0 +1,33 @@
+{
+  "pages":[
+    "pages/video/video",
+    "pages/exam/exam",
+    "pages/user/user",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "xxx系统",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar":{
+    "list":[
+      {
+        "text":"视频",
+        "pagePath":"pages/video/video",
+        "iconPath":""
+      },{
+        "text":"考试",
+        "pagePath":"pages/exam/exam",
+        "iconPath":""
+      },{
+        "text":"我的",
+        "pagePath":"pages/user/user",
+        "iconPath":""
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
