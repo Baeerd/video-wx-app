@@ -1,8 +1,7 @@
 <!--index.wxml-->
 <view class="container">
 
-  <view class="userinfocontainer">
-    <view class="userinfo">
+  <view class="userinfo">
       <block wx:if="{{canIUseOpenData}}">
         <view class="userinfo-avatar" bindtap="bindViewTap">
           <open-data type="userAvatarUrl"></open-data>
@@ -10,18 +9,19 @@
         <open-data type="userNickName"></open-data>
       </block>
       <block wx:elif="{{!hasUserInfo}}">
-        <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-        <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-        <view wx:else> 请使用1.4.4及以上版本基础库 </view>
-      </block>
-      <block wx:else>
-        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        <button bindtap="getUserProfile"> 获取头像昵称 </button>
       </block>
     </view>
 
- 
-
+  <view class="userinfocontainer">
+    <view class="content">
+      <van-cell icon="location-o" size="large" title="姓名" value="内容" is-link />
+      <van-cell icon="location-o" size="large" title="已看视频数量" value="内容" is-link />
+      <van-cell icon="location-o" size="large" title="未看视频数量" value="内容" is-link />
+      <van-cell icon="location-o" size="large" title="全部试卷" value="内容" is-link />
+      <van-cell icon="location-o" size="large" title="未做试卷" value="内容" is-link />
+      <van-cell icon="location-o" size="large" title="积分" value="内容" is-link />
+    </view>
   </view>
 
 </view>

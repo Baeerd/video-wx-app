@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "custom-select-cell": "/component/selectCell/selectCell"
+    "custom-select-cell": "/component/selectCell/selectCell",
+
+    "van-dialog": "@vant/weapp/dialog/index"
   }
 }

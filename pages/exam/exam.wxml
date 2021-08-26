@@ -1,66 +1,49 @@
 <custom-select-cell title="考试" sheetTitle="请选择试卷" list="{{ actions }}" bind:selectAction="onSelect"/>
- 
+
+<van-dialog id="van-dialog" />
+
 <view class='container'>
 <swiper class='sheet' current='{{id}}' bindchange="swiperChange">
-    <swiper-item>
-         <view class='naire'>
-            <scroll-view scroll-y class="question">
-                1.问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问问题问题问题问题题问题问题问题问题问题问题问题问题问题问题问题问问题问题问题问题题问题问题问题问题问题问题问题问题问题问题问题问问题问题问题问题题问题问题问题问题问题问题问题问题问题问题问题问问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问问题问题问题问题题问题1
-            </scroll-view>
-           <!--view class='border' /-->
-           <radio-group class='radio-group' name='answer' bindchange='radioChange'>
-             <label class='radio'><radio value="A" color='#fcbe39' />11111</label>
-             <label class='radio'><radio value="B" color='#fcbe39' />22222</label>
-             <label class='radio'><radio value="C" color='#fcbe39' />33333</label>
-             <label class='radio'><radio value="D" color='#fcbe39' />44444</label>
-           </radio-group>
-         </view>
-         <view class='button-group'>
-            <button class='button' hover-class='none' bindtap='lastq' disabled >上一题</button>
-            <button class='button' hover-class='none' bindtap='nextq'>下一题</button>
-           <!-- <button class='button' hover-class='none' form-type='submit' bindtap='formSubmit'>提交</button> -->
-         </view>
-         <view class='id'>1/3</view>
-     </swiper-item>
 
-     <swiper-item>
-         <view class='naire'>
-            <scroll-view scroll-y class="question">
-                2.问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问问题问题问题问题题问题问题问题问题问题问题问题问题问题问题问题问问题问题问题问题题问题问题问题问题问题问题问题问题问题问题问题问问题问题问题问题题问题问题问题问题问题问题问题问题问题问题问题问问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问问题问题问题问题题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问问题问题问题问题题问题问题问题问题问题问题问题问题问题问题问题问问题问题问题问题题问题问题问题问题问题问题问题问题问题问题问题问问题问题问题问题题问题问题问题问题问题问题问题问题问题问题问题问问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问问题问题问题问题题问题2
-            </scroll-view>
-           <!--view class='border' /-->
-           <checkbox-group class='radio-group' name='answer' bindchange='radioChange'>
-             <label class='radio'><checkbox value="A" color='#fcbe39' />11111</label>
-             <label class='radio'><checkbox value="B" color='#fcbe39' />22222</label>
-             <label class='radio'><checkbox value="C" color='#fcbe39' />33333</label>
-             <label class='radio'><checkbox value="D" color='#fcbe39' />44444</label>
-           </checkbox-group>
-         </view>
-         <view class='button-group'>
-            <button class='button' hover-class='none' bindtap='lastq' >上一题</button>
-            <button class='button' hover-class='none' bindtap='nextq'>下一题</button>
-           <!-- <button class='button' hover-class='none' form-type='submit' bindtap='formSubmit'>提交</button> -->
-         </view>
-         <view class='id'>2/3</view>
-     </swiper-item>
+<block wx:for="{{ examList }}" wx:key="index">
 
-     <swiper-item>
-         <view class='naire'>
-           <view class='question'>3.问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题问题3</view>
-           <!--view class='border' /-->
-           <radio-group class='radio-group' name='answer' bindchange='radioChange'>
-             <label class='radio'><radio value="A" color='#fcbe39' />11111</label>
-             <label class='radio'><radio value="B" color='#fcbe39' />2222</label>
-             <label class='radio'><radio value="C" color='#fcbe39' />33333</label>
-             <label class='radio'><radio value="D" color='#fcbe39' />44444</label>
-           </radio-group>
-         </view>
-         <view class='button-group'>
-           <button class='button' hover-class='none' bindtap='lastq' >上一题</button>
-           <!-- <button class='button' hover-class='none' form-type='submit' bindtap='nextq'>下一题</button> -->
-           <button class='button' hover-class='none' bindtap='formSubmit'>提交</button>
-         </view>
-         <view class='id'>3/3</view>
-     </swiper-item>
+  <swiper-item>
+      <view class='naire'>
+        <scroll-view scroll-y class="question">
+            {{ item.question }}
+        </scroll-view>
+        <block wx:if="{{ item.type == '1' }}">
+          <radio-group class='radio-group' name='answer' bindchange='radioChange'>
+            <block wx:for="{{ item.selections }}" wx:for-index="selectIndex" wx:for-item="select" wx:key="selectIndex" >
+              <label class='radio'><radio value="{{ select.value }}" color='#F32329' />{{ select.name }}</label>
+            </block>
+          </radio-group>
+        </block>
+        <block wx:else>
+          <checkbox-group class='radio-group' name='answer' bindchange='radioChange'>
+            <block wx:for="{{ item.selections }}" wx:for-index="selectIndex" wx:for-item="select" wx:key="selectIndex" >
+              <label class='radio'><checkbox value="{{ select.value }}" color='#F32329' />{{ select.name }}</label>
+            </block>
+          </checkbox-group>
+        </block>
+      </view>
+      <view class='button-group'>
+        <block wx:if="{{ index == 0 }}">
+          <button class='button' hover-class='none' bindtap='lastq' disabled >上一题</button>
+          <button class='button' hover-class='none' bindtap='nextq'>下一题</button>
+        </block>
+        <block wx:elif="{{ index == examList.length-1 }}">
+          <button class='button' hover-class='none' bindtap='lastq' >上一题</button>
+          <button class='button' hover-class='none' form-type='submit' bindtap='formSubmit'>交卷</button>
+        </block>
+        <block wx:else>
+          <button class='button' hover-class='none' bindtap='lastq'>上一题</button>
+          <button class='button' hover-class='none' bindtap='nextq'>下一题</button>
+        </block>
+      </view>
+      <view class='id'>{{ index+1 }}/ {{ examList.length }} </view>
+  </swiper-item>
+
+</block>
  </swiper>
  </view>

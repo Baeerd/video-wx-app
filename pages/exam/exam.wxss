@@ -61,7 +61,7 @@ page {
   justify-content: space-between;
 }
 .button {
-  background: #fcbe39;
+  background: #F32329;
   border-radius: 100rpx;
   font-size: 30rpx;
   line-height: 52rpx;
