@@ -2,16 +2,17 @@
 <view class="container">
 
   <view class="userinfo">
-      <block wx:if="{{canIUseOpenData}}">
-        <view class="userinfo-avatar" bindtap="bindViewTap">
+    <block wx:if="{{ isLogin }}">
+        <view class="userinfo-avatar" bindtap="logout">
           <open-data type="userAvatarUrl"></open-data>
         </view>
         <open-data type="userNickName"></open-data>
-      </block>
-      <block wx:elif="{{!hasUserInfo}}">
-        <button bindtap="getUserProfile"> 获取头像昵称 </button>
-      </block>
-    </view>
+    </block>
+    <block wx:else>
+      <button bindtap="login"> 登录 </button>
+      {{openId}}
+    </block>
+  </view>
 
   <view class="userinfocontainer">
     <view class="content">
