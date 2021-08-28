@@ -38,12 +38,15 @@ page {
 
 .userinfo-avatar {
   overflow: hidden;
-  width: 158rpx;
-  height: 158rpx;
+  width: 168rpx;
+  height: 168rpx;
   margin-top: 50rpx;
   border-radius: 50%;
 }
 
-.usermotto {
-  margin-top: 200px;
+.emptyUserLogo{
+  overflow: hidden;
+  width: 168rpx;
+  height: 168rpx;
+  border-radius: 50%;
 }
