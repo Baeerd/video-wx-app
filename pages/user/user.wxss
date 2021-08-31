@@ -27,7 +27,7 @@ page {
   background: #FFFFFF;
   border-radius: 36rpx;
   margin-top: -40rpx;
-  z-index: 999;
+  z-index: 2;
   width: 84%;
   height: 65vh;
 }

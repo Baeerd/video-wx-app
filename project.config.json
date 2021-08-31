@@ -4,7 +4,7 @@
         "ignore": []
     },
     "setting": {
-        "urlCheck": false,
+        "urlCheck": true,
         "es6": true,
         "enhance": true,
         "postcss": true,
@@ -24,7 +24,7 @@
         "lazyloadPlaceholderEnable": false,
         "useMultiFrameRuntime": true,
         "useApiHook": true,
-        "useApiHostProcess": true,
+        "useApiHostProcess": false,
         "babelSetting": {
             "ignore": [],
             "disablePlugins": [],
@@ -45,7 +45,7 @@
     },
     "compileType": "miniprogram",
     "libVersion": "2.19.2",
-    "appid": "wxcec2524213396666",
+    "appid": "wxa473d1717e79e6e9",
     "projectname": "video-wx-app",
     "debugOptions": {
         "hidedInDevtools": []

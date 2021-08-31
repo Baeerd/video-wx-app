@@ -1,4 +1,7 @@
 <!--index.wxml-->
+
+<van-dialog id="van-dialog" />
+
 <view class="container">
 
   <view class="userinfo">
@@ -10,7 +13,7 @@
     </block>
     <block wx:else>
       <view style="margin-top: 50rpx;" bindtap="getUserProfile">
-          <image class="emptyUserLogo" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.616pic.com%2Fys_bnew_img%2F00%2F08%2F58%2Fn3po6ayRGw.jpg&refer=http%3A%2F%2Fpic.616pic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1632712763&t=6cf6dc6a4960c33a55a2a91167d0d580"></image>
+          <image class="emptyUserLogo" src="https://636c-cloud1-5gvqvnv2069f6684-1307004666.tcb.qcloud.la/userLogo.png?sign=f3c534826f4e1c95bd4891a3fdf29b20&t=1630308145"></image>
         </view>
         <view bindtap="getUserProfile">获取用户信息</view>
     </block>
@@ -29,6 +32,9 @@
       <van-cell icon="location-o" size="large" title="全部试卷" value="{{ userInfo.exam1 }}" />
       <van-cell icon="location-o" size="large" title="未做试卷" value="{{ userInfo.exam2 }}" />
       <van-cell icon="location-o" size="large" title="积分" value="{{ userInfo.fen }}" />
+      <view>分数：{{score}}</view>
+      <button bindtap="testRenlian">人脸识别</button>
+      <camera device-position="front" flash="off" binderror="error" style="width: 100%; height: 300px;"></camera>
     </view>
   </view>
 
