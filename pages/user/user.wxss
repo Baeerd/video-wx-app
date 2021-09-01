@@ -1,6 +1,6 @@
 /**index.wxss**/
 page {
-  background: #bde5f8;
+  background: #377EB4;
 }
 
 .container {

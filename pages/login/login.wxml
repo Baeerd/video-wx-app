@@ -1,0 +1,35 @@
+<view class="container">
+
+    <image src="https://636c-cloud1-5gvqvnv2069f6684-1307004666.tcb.qcloud.la/image/logo.png?sign=3472c5fd23b787194f168e9a71956235&t=1630394789"
+        class="logo"
+    />
+
+    <view class="systemName">xxx系统</view>
+
+    <view class="userInfo">
+        <van-cell-group>
+            <van-field
+            value="{{ user.username }}"
+            custom-style="border-radius: 45rpx;margin-bottom: 30rpx"
+            placeholder="请输入身份证号"
+            left-icon="user-o"
+            size="large"
+            error="{{usernameCheck}}"
+            bind:change="usernameChange"
+            />
+
+            <van-field    
+            value="{{ user.password }}"
+            custom-style="border-radius: 45rpx; margin-bottom: 30rpx"
+            type="password"
+            left-icon="bag-o"
+            size="large"
+            error="{{passwordCheck}}"
+            placeholder="请输入密码"
+            bind:change="passwordChange"
+            />
+
+            <van-button round color="#77B3D7" size="large" bindtap="login">登陆</van-button>
+        </van-cell-group>
+    </view>
+</view>

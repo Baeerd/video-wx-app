@@ -1,36 +1,48 @@
 {
-  "setting": {},
-  "condition": {
-    "plugin": {
-      "list": []
-    },
-    "game": {
-      "list": []
-    },
-    "gamePlugin": {
-      "list": []
-    },
-    "miniprogram": {
-      "list": [
-        {
-          "name": "pages/exam/exam",
-          "pathName": "pages/exam/exam",
-          "query": "",
-          "scene": null
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
         },
-        {
-          "name": "pages/video/video",
-          "pathName": "pages/video/video",
-          "query": "",
-          "scene": null
+        "game": {
+            "list": []
         },
-        {
-          "name": "pages/user/user",
-          "pathName": "pages/user/user",
-          "query": "",
-          "scene": null
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "pages/exam/exam",
+                    "pathName": "pages/exam/exam",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/video/video",
+                    "pathName": "pages/video/video",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/user/user",
+                    "pathName": "pages/user/user",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/login/login",
+                    "pathName": "pages/login/login",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/face/face",
+                    "pathName": "pages/face/face",
+                    "query": "",
+                    "scene": null
+                }
+            ]
         }
-      ]
     }
-  }
 }

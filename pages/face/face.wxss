@@ -1,0 +1,29 @@
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0;
+    box-sizing: border-box;
+} 
+
+.photo{
+    width: 600rpx;
+    height: 600rpx;
+    border-radius: 100%;
+    position: relative;
+    top: 20vh;
+}
+
+.font{
+    font-size: 50rpx;
+    position: relative;
+    top: 10vh;
+}
+
+.submit{
+    width: 40%;
+    position: fixed;
+    bottom:20vh;
+}

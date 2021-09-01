@@ -32,9 +32,6 @@
       <van-cell icon="location-o" size="large" title="全部试卷" value="{{ userInfo.exam1 }}" />
       <van-cell icon="location-o" size="large" title="未做试卷" value="{{ userInfo.exam2 }}" />
       <van-cell icon="location-o" size="large" title="积分" value="{{ userInfo.fen }}" />
-      <view>分数：{{score}}</view>
-      <button bindtap="testRenlian">人脸识别</button>
-      <camera device-position="front" flash="off" binderror="error" style="width: 100%; height: 300px;"></camera>
     </view>
   </view>
 

@@ -1,14 +1,14 @@
 {
   "pages":[
+    "pages/login/login",
     "pages/video/video",
     "pages/exam/exam",
     "pages/user/user",
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/face/face"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#5875D0",
+    "navigationBarBackgroundColor": "#377EB4",
     "navigationBarTitleText": "xxx系统",
     "navigationBarTextStyle":"white"
   },

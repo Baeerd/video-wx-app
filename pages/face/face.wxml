@@ -1,0 +1,12 @@
+<view class="container">
+
+    <view class="font">人脸识别</view>
+
+        <camera device-position="front" flash="off" binderror="error" class="photo"></camera>
+
+    <view class="submit">
+        <van-button round color="#77B3D7" size="large" bindtap="submitPhoto">拍照</van-button>
+    </view>
+</view>
+
+<van-dialog id="van-dialog" />
