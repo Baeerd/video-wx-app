@@ -39,11 +39,9 @@ Page({
         },
         success: function (res) {
           wx.hideToast();
-          console.log(res);
           var data = JSON.parse(res.data);
           var face_token = data.faces[0].face_token;
           console.log(face_token);
-          
 
           wx.request({
             url: 'https://api-cn.faceplusplus.com/facepp/v3/compare',
@@ -55,7 +53,7 @@ Page({
             data: {
               'api_key':'U6Ulb3ok97Zugi63vDPcwE-27BzEai4D',
               'api_secret':'NJQwiAf4cNxXA00Ywn0jOp9NRAlae5bV',
-              'image_url1':'https://636c-cloud1-5gvqvnv2069f6684-1307004666.tcb.qcloud.la/02.jpg?sign=0c3b979228b4a1a9d040f19e8a147825&t=1630371693',
+              'image_url1':'https://6261-baeerd-cloud-2gqj0tl5323788d0-1307004666.tcb.qcloud.la/image/face.jpg?sign=2ad3b77394bc94e2d0644034867162e9&t=1630466891',
               'face_token2': face_token
             },
             success : (response)=> {
