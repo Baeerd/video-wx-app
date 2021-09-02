@@ -1,8 +1,9 @@
 <view class="container">
 
-    <view class="font">人脸识别</view>
+    <view class="font">请录入人脸</view>
+    <view class="subFont">注意：人脸数据只能录入一次，之后使用过程中的人脸校验都以此次录入数据为准，请谨慎录入</view>
 
-        <camera device-position="front" flash="off" binderror="error" class="photo"></camera>
+    <camera device-position="front" flash="off" binderror="error" class="photo"></camera>
 
     <view class="submit">
         <van-button round color="#77B3D7" size="large" bindtap="submitPhoto">拍照</van-button>

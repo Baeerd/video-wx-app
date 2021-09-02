@@ -16,7 +16,7 @@ page {
   background: #FFFFFF;
   border-radius: 36rpx;
   margin-top: 80rpx;
-  width: 84%;
+  width: 90%;
   height: 80vh;
 }
 

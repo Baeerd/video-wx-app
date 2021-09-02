@@ -22,8 +22,15 @@
     top: 10vh;
 }
 
+.subFont{
+    font-size: 30rpx;
+    position: relative;
+    top: 10vh;
+    width: 80%;
+}
+
 .submit{
     width: 40%;
     position: fixed;
-    bottom:20vh;
+    bottom:10vh;
 }

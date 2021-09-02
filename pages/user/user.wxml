@@ -7,9 +7,9 @@
   <view class="userinfo">
     <block wx:if="{{ hasUserInfo }}" >
       <view class="userinfo-avatar" bindtap="logout">
-          <open-data type="userAvatarUrl"></open-data>
-        </view>
-        <open-data type="userNickName"></open-data>
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <view class="name">姓名</view>
     </block>
     <block wx:else>
       <view style="margin-top: 50rpx;" bindtap="getUserProfile">
@@ -21,16 +21,10 @@
 
   <view class="userinfocontainer">
     <view class="content">
-      <van-cell wx:if="{{ editNameFlag }}" size="large" title="姓名" icon="location-o" >
-        <view slot="">
-            <van-field focus custom-style="padding: 0;" value="{{ userInfo.name }}" border='{{ false }}' bind:change="nameChange" bindblur="editName" data-flag="{{false}}"/>
-        </view>
-      </van-cell>
-      <van-cell wx:else icon="location-o" size="large" title="姓名" value="{{ userInfo.name }}" is-link bindtap="editName" data-flag="{{true}}"/>
+      <van-cell icon="location-o" size="large" title="手机号" value="{{ 123456789 }}" />
       <van-cell icon="location-o" size="large" title="已看视频数量" value="{{ userInfo.video1 }}" />
       <van-cell icon="location-o" size="large" title="未看视频数量" value="{{ userInfo.video2 }}"/>
-      <van-cell icon="location-o" size="large" title="全部试卷" value="{{ userInfo.exam1 }}" />
-      <van-cell icon="location-o" size="large" title="未做试卷" value="{{ userInfo.exam2 }}" />
+      <van-cell icon="location-o" size="large" title="考试得分" value="{{ userInfo.exam2 }}" />
       <van-cell icon="location-o" size="large" title="积分" value="{{ userInfo.fen }}" />
     </view>
   </view>
